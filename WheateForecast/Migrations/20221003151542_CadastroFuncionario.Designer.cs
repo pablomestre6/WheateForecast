@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WheateForecast.Data;
 
@@ -11,9 +12,10 @@ using WheateForecast.Data;
 namespace WheateForecast.Migrations
 {
     [DbContext(typeof(WheateForecastContext))]
-    partial class WheateForecastContextModelSnapshot : ModelSnapshot
+    [Migration("20221003151542_CadastroFuncionario")]
+    partial class CadastroFuncionario
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -1,0 +1,83 @@
+﻿@model IEnumerable<WheateForecast.Models.CadastroFuncionarioModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Ficha de Funcionários</h1>
+
+<p>
+    <a asp-action="Create">Cria Nova Vaga</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Setor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CPF)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Identidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumeroTelefone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Endereco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CEP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataAdmicao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataNacimento)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Setor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CPF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Identidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroTelefone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Endereco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CEP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataAdmicao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataNacimento)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edita</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Demitir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

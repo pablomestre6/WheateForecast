@@ -15,5 +15,7 @@ namespace WheateForecast.Data
         }
 
         public DbSet<WheateForecast.Models.AlmoxarifatoModel> AlmoxarifatoModel { get; set; } = default!;
+
+        public DbSet<WheateForecast.Models.CadastroFuncionarioModel> CadastroFuncionarioModel { get; set; }
     }
 }

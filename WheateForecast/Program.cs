@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using WheateForecast.Data;
+
+//DI
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<WheateForecastContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("WheateForecastContext") ?? throw new InvalidOperationException("Connection string 'WheateForecastContext' not found.")));
